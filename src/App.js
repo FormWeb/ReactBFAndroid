@@ -3,6 +3,7 @@ import './App.css';
 import Welcome from './components/welcome/Welcome';
 import ProductList from './components/product-list/ProductList';
 import { nanoid } from "nanoid"
+import EventComponent from './components/event-component/EventComponent';
 
 function App() {
 
@@ -14,7 +15,9 @@ function App() {
 
   return (
     <div className="App">
-      <ProductList products={products}></ProductList>
+
+      <EventComponent></EventComponent>
+
     </div>
   );
 }
