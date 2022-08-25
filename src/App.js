@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Welcome from './components/welcome/Welcome';
+import ProductList from './components/product-list/ProductList';
+import { nanoid } from "nanoid"
 
 function App() {
+
+  const products = [
+    {id: nanoid(), name:"Banane"},
+    {id: nanoid(), name:"Pomme"},
+    {id: nanoid(), name:"Poire"}
+  ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ProductList products={products}></ProductList>
     </div>
   );
 }
