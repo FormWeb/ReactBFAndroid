@@ -4,6 +4,7 @@ import Welcome from './components/welcome/Welcome';
 import ProductList from './components/product-list/ProductList';
 import { nanoid } from "nanoid"
 import EventComponent from './components/event-component/EventComponent';
+import CounterComm from './components/counter-comm/CounterComm';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
     <div className="App">
 
       <EventComponent></EventComponent>
-
+      <CounterComm></CounterComm>
     </div>
   );
 }
