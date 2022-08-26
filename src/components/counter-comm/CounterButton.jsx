@@ -2,6 +2,7 @@ import { useState } from "react"
 
 const CounterButton = (props) => {
 
+    // Props (les deux props sont des fonction définie dans le composant parent)
     const { clickReset, clickAdd } = props
 
     // State
@@ -11,15 +12,13 @@ const CounterButton = (props) => {
         clickAdd(incr)
     }
 
-    const handleReset = () => {
-        clickReset(42)
-    }
-
     return (
         <div>
             <input type="text" value={incr} onChange={e => setIncr(e.target.value)}/>
+            {/* J'appelle une fonction déclaré au dessus  */}
             <button onClick={handleAdd}>Add</button>
-            <button onClick={handleReset}>Reset</button>
+            {/* Je déclare directement ma fonction dans le JSX  */}
+            <button onClick={() => clickReset(42)}>Reset</button>
         </div>
     )
 }
